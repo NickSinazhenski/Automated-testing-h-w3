@@ -1,3 +1,4 @@
+import { expect } from '@playwright/test';
 export class FormPage {
   constructor(page) {
     this.page = page;
@@ -7,14 +8,9 @@ export class FormPage {
     this.lastName = '#lastName';
     this.email = '#userEmail';
     this.gender = label => `label[for="gender-radio-${label}"]`; 
-    this.dobInput = '#dateOfBirthInput';
-    this.subjectInput = '#subjectsInput';
-    this.hobby = name => `label[for="hobbies-checkbox-${name}"]`;
-    this.upload = '#uploadPicture';
-    this.address = '#currentAddress';
-    this.state = '#state';
     this.city = '#city';
     this.submit = '#submit';
+    this.mobile = '#userNumber';
   }
 
   async navigate() {
@@ -29,31 +25,27 @@ export class FormPage {
     await this.page.fill(this.mobile, mobile);
   }
 
-  async selectSubject(subject) {
-    await this.page.fill(this.subjectInput, subject);
-    await this.page.keyboard.press('Enter');
-  }
-
-  async selectHobby(hobbyId) {
-    await this.page.click(this.hobby(hobbyId)); 
-  }
-
-  async uploadPicture(filePath) {
-    await this.page.setInputFiles(this.upload, filePath);
-  }
-
-  async fillAddress(address) {
-    await this.page.fill(this.address, address);
-  }
-
-  async selectStateAndCity(stateName, cityName) {
-    await this.page.click(this.state);
-    await this.page.getByText(stateName).click();
-    await this.page.click(this.city);
-    await this.page.getByText(cityName).click();
-  }
-
   async submitForm() {
     await this.page.click(this.submit);
+  }
+
+  async checkModal(user) {
+    const modal = this.page.locator('.modal-content');
+    await modal.waitFor({ state: 'visible' });
+
+    const header = this.page.locator('#example-modal-sizes-title-lg');
+    await expect(header).toHaveText('Thanks for submitting the form');
+
+    const fieldMap = {
+      'Student Name': `${user.firstName} ${user.lastName}`,
+      'Student Email': user.email,
+      'Gender': user.gender === 1 ? 'Male' : user.gender === 2 ? 'Female' : 'Other',
+      'Mobile': user.mobile
+    };
+
+    for (const [label, expectedValue] of Object.entries(fieldMap)) {
+      const locator = this.page.locator('td', { hasText: label }).locator('xpath=following-sibling::td');
+      await expect(locator).toHaveText(expectedValue);
+    }
   }
 }
