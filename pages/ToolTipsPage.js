@@ -9,37 +9,26 @@ export class ToolTipsPage {
     this.input = '#toolTipTextField';
     this.linkContrary = '//a[.="Contrary"]';
     this.linkVersion = '//a[.="1.10.32"]';
-    this.tooltip = '.tooltip-inner';
   }
   async navigate() {
     await this.page.goto(this.url);
   }
 
   async checkTooltips() {
-  await this.page.locator(this.button).scrollIntoViewIfNeeded();
-  await this.page.hover(this.button);
-  const buttonTooltip = this.page.locator('.tooltip.show .tooltip-inner');
-  await expect(buttonTooltip).toHaveText('You hovered over the Button');
-  await this.page.mouse.move(0, 0);
+    const tooltipElements = [
+      { locator: this.button, text: 'You hovered over the Button' },
+      { locator: this.input, text: 'You hovered over the text field' },
+      { locator: this.linkContrary, text: 'You hovered over the Contrary' },
+      { locator: this.linkVersion, text: 'You hovered over the 1.10.32' },
+    ];
 
-  await this.page.locator(this.linkContrary).waitFor({ state: 'visible' });
-  await this.page.locator(this.input).scrollIntoViewIfNeeded();
-  await this.page.hover(this.input);
-  const inputTooltip = this.page.locator('.tooltip.show .tooltip-inner');
-  await expect(inputTooltip).toHaveText('You hovered over the text field');
-  await this.page.mouse.move(0, 0);
-
-  await this.page.locator(this.linkContrary).waitFor({ state: 'visible' });
-  await this.page.locator(this.linkContrary).scrollIntoViewIfNeeded();
-  await this.page.hover(this.linkContrary);
-  const contraryTooltip = this.page.locator('.tooltip.show .tooltip-inner');
-  await expect(contraryTooltip).toHaveText('You hovered over the Contrary');
-  await this.page.mouse.move(0, 0);
-
-  await this.page.locator(this.linkContrary).waitFor({ state: 'visible' });
-  await this.page.locator(this.linkVersion).scrollIntoViewIfNeeded();
-  await this.page.hover(this.linkVersion);
-  const versionTooltip = this.page.locator('.tooltip.show .tooltip-inner');
-  await expect(versionTooltip).toHaveText('You hovered over the 1.10.32');
-}
+    for (const { locator, text } of tooltipElements) {
+      await this.page.locator(this.linkContrary).waitFor({ state: 'visible' });
+      await this.page.locator(locator).scrollIntoViewIfNeeded();
+      await this.page.hover(locator);
+      const tooltip = this.page.locator('.tooltip.show .tooltip-inner');
+      await expect(tooltip).toHaveText(text);
+      await this.page.mouse.move(0, 0);
+    }
+  }
 }
