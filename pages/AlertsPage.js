@@ -1,30 +1,42 @@
-export class AlertsPage {
+class AlertsPage {
   constructor(page) {
     this.page = page;
     this.url = 'https://demoqa.com/alerts';
-    this.alertBtn = '#alertButton';
-    this.timerAlertBtn = '#timerAlertButton';
-    this.confirmBtn = '#confirmButton';
-    this.promptBtn = '#promtButton';
+    this.alertButton = '#alertButton';
+    this.timerAlertButton = '#timerAlertButton';
+    this.confirmButton = '#confirmButton';
+    this.promptButton = '#promtButton';
+    this.confirmResult = '#confirmResult';
+    this.promptResult = '#promptResult';
   }
 
-  async navigate() {
+  async open() {
     await this.page.goto(this.url);
   }
 
-  async clickAlert() {
-    await this.page.click(this.alertBtn);
+  async clickAlertButton() {
+    await this.page.click(this.alertButton);
   }
 
-  async clickTimerAlert() {
-    await this.page.click(this.timerAlertBtn);
+  async clickTimerAlertButton() {
+    await this.page.click(this.timerAlertButton);
   }
 
-  async clickConfirm() {
-    await this.page.click(this.confirmBtn);
+  async clickConfirmButton() {
+    await this.page.click(this.confirmButton);
   }
 
-  async clickPrompt() {
-    await this.page.click(this.promptBtn);
+  async clickPromptButton() {
+    await this.page.click(this.promptButton);
+  }
+
+  async getConfirmResult() {
+    return await this.page.textContent(this.confirmResult);
+  }
+
+  async getPromptResult() {
+    return await this.page.textContent(this.promptResult);
   }
 }
+
+module.exports = { AlertsPage };
