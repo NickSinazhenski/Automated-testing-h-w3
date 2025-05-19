@@ -26,7 +26,6 @@ When('I submit the form', async function () {
 });
 
 Then('I should see the submission modal with:', async function (dataTable) {
- 
   const data = dataTable.rows()[0];
   const user = {
     firstName: data[0],
