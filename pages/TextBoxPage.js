@@ -1,44 +1,65 @@
-import { expect } from '@playwright/test';
+const BasePage = require('./BasePage');
 
-export class TextBox {
-    constructor(page) {
-        this.page = page;
-        this.url = 'https://demoqa.com/text-box';
-        this.fullNameInput = '#userName';
-        this.emailInput = '#userEmail';
-        this.currentAddressInput = '#currentAddress';
-        this.permanentAddressInput = '#permanentAddress';
-        this.submitBtn = '#submit';
-    }
+class TextBoxPage extends BasePage {
+  constructor(page) {
+    super(page);
+    this.locators = {
+      fullNameInput: '#userName',
+      emailInput: '#userEmail',
+      currentAddressInput: '#currentAddress',
+      permanentAddressInput: '#permanentAddress',
+      submitBtn: '#submit',
+      output: '#output',
+      nameOutput: 'p#name',
+      emailOutput: 'p#email',
+      currentAddressOutput: 'p#currentAddress',
+      permanentAddressOutput: 'p#permanentAddress'
+    };
+  }
+  
+  async navigate() {
+    await this.navigateTo('https://demoqa.com/text-box');
+  }
+  
+  async fillForm(user) {
+    await this.fillInput(this.locators.fullNameInput, `${user.firstName} ${user.lastName}`);
+    await this.fillInput(this.locators.emailInput, user.email);
+    await this.fillInput(this.locators.currentAddressInput, user.currentAddress);
+    await this.fillInput(this.locators.permanentAddressInput, user.permanentAddress);
+  }
+  
+  async submitForm() {
+    await this.clickElement(this.locators.submitBtn);
+  }
+
+  async checkOutput(user) {
+    await this.waitForElement(this.locators.output);
     
-    async navigate() {
-        await this.page.goto(this.url);
-    }
+    const output = this.page.locator(this.locators.output);
     
-    async fillForm(user) {
-        await this.page.fill(this.fullNameInput, user.firstName + ' ' + user.lastName);
-        await this.page.fill(this.emailInput, user.email);
-        await this.page.fill(this.currentAddressInput, user.currentAddress);
-        await this.page.fill(this.permanentAddressInput, user.permanentAddress);
+    await this.waitForElement(this.locators.nameOutput);
+    await this.waitForElement(this.locators.emailOutput);
+    await this.waitForElement(this.locators.currentAddressOutput);
+    await this.waitForElement(this.locators.permanentAddressOutput);
+
+    const nameText = await this.getText(this.locators.nameOutput);
+    const emailText = await this.getText(this.locators.emailOutput);
+    const currentAddressText = await this.getText(this.locators.currentAddressOutput);
+    const permanentAddressText = await this.getText(this.locators.permanentAddressOutput);
+
+    if (nameText !== `Name:${user.firstName} ${user.lastName}`) {
+      throw new Error(`Name mismatch. Expected: Name:${user.firstName} ${user.lastName}, Got: ${nameText}`);
     }
-    
-    async submitForm() {
-        await this.page.click(this.submitBtn);
+    if (emailText !== `Email:${user.email}`) {
+      throw new Error(`Email mismatch. Expected: Email:${user.email}, Got: ${emailText}`);
     }
-    async checkOutput(user) {
-        const modal = this.page.locator('#output');
-        await modal.waitFor({ state: 'visible' });
-
-        const nameLocator = modal.locator('p#name');
-        await expect(nameLocator).toHaveText(`Name:${user.firstName} ${user.lastName}`);
-
-        const emailLocator = modal.locator('p#email');
-        await expect(emailLocator).toHaveText(`Email:${user.email}`);
-
-        const currentAddressLocator = modal.locator('p#currentAddress');
-        await expect(currentAddressLocator).toHaveText(`Current Address :${user.currentAddress} `);
-
-        const permanentAddressLocator = modal.locator('p#permanentAddress');
-        await expect(permanentAddressLocator).toHaveText(`Permananet Address :${user.permanentAddress} `);
+    if (currentAddressText !== `Current Address :${user.currentAddress} `) {
+      throw new Error(`Current address mismatch. Expected: Current Address :${user.currentAddress} , Got: ${currentAddressText}`);
     }
+    if (permanentAddressText !== `Permananet Address :${user.permanentAddress} `) {
+      throw new Error(`Permanent address mismatch. Expected: Permananet Address :${user.permanentAddress} , Got: ${permanentAddressText}`);
+    }
+  }
 }
+
+module.exports = TextBoxPage;
