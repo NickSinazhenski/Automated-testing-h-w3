@@ -1,5 +1,3 @@
-import { expect } from '@playwright/test';
-
 export class SelectMenuPage {
   constructor(page) {
     this.page = page;
