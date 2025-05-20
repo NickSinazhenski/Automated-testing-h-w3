@@ -1,6 +1,6 @@
-import { expect } from '@playwright/test';
+const { expect } = require('@playwright/test');
 
-export class TextBox {
+class TextBox {
     constructor(page) {
         this.page = page;
         this.url = 'https://demoqa.com/text-box';
@@ -10,21 +10,22 @@ export class TextBox {
         this.permanentAddressInput = '#permanentAddress';
         this.submitBtn = '#submit';
     }
-    
+
     async navigate() {
         await this.page.goto(this.url);
     }
-    
+
     async fillForm(user) {
-        await this.page.fill(this.fullNameInput, user.firstName + ' ' + user.lastName);
+        await this.page.fill(this.fullNameInput, `${user.firstName} ${user.lastName}`);
         await this.page.fill(this.emailInput, user.email);
         await this.page.fill(this.currentAddressInput, user.currentAddress);
         await this.page.fill(this.permanentAddressInput, user.permanentAddress);
     }
-    
+
     async submitForm() {
         await this.page.click(this.submitBtn);
     }
+
     async checkOutput(user) {
         const modal = this.page.locator('#output');
         await modal.waitFor({ state: 'visible' });
@@ -42,3 +43,5 @@ export class TextBox {
         await expect(permanentAddressLocator).toHaveText(`Permananet Address :${user.permanentAddress} `);
     }
 }
+
+module.exports = { TextBox };
