@@ -1,4 +1,3 @@
-
 Feature: Interaction with various types of alerts
 
   Scenario: Display and accept a standard alert

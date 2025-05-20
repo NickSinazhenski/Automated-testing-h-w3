@@ -7,8 +7,6 @@ Given('the user navigates to the Alerts section', async function () {
   await this.alertPage.open();
 });
 
-
-
 When('they trigger a simple alert popup', async function () {
   this.dialogMessage = '';
   this.page.once('dialog', async (dialog) => {
@@ -22,17 +20,12 @@ Then('an alert appears with text {string}', async function (expectedMessage) {
   expect(this.dialogMessage).toBe(expectedMessage);
 });
 
-
-
-
 When('they activate the confirm alert and press Cancel', async function () {
   this.page.once('dialog', async (dialog) => {
     await dialog.dismiss();
   });
   await this.alertPage.clickConfirmButton();
 });
-
-
 
 When('they activate the confirm alert and press OK', async function () {
   this.page.once('dialog', async (dialog) => {
@@ -46,9 +39,6 @@ Then('the result area shows {string}', async function (expectedResult) {
   expect(result).toContain(expectedResult);
 });
 
-
-
-
 When('the prompt alert is shown and they input {string}', async function (textInput) {
   this.page.once('dialog', async (dialog) => {
     await dialog.accept(textInput);
@@ -60,9 +50,6 @@ Then('the page displays prompt result containing {string}', async function (expe
   const result = await this.alertPage.getPromptResult();
   expect(result).toContain(expectedPrompt);
 });
-
-
-
 
 When('they click the delayed alert button and accept it',{ timeout: 10000 }, async function () {
   this.dialogMessage = '';

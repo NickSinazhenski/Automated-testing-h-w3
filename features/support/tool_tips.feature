@@ -1,4 +1,3 @@
-
 Feature: Tool Tips
 
   Scenario: Check text on Button tooltip

@@ -14,8 +14,7 @@ class ToolTipsPage {
   async navigate() {
     await this.page.goto(this.url);
   }
-
-  
+ 
   async getTooltipTextForElement(elementLocator) {
     await elementLocator.scrollIntoViewIfNeeded();
     await elementLocator.hover();
