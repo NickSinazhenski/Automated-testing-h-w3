@@ -1,6 +1,6 @@
 const { Given, When, Then, setDefaultTimeout } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const { TextBox } = require('../../pages/TextBoxPage');
+const TextBoxPage = require('../../pages/TextBoxPage');
 const { faker } = require('@faker-js/faker');
 
 let textBoxPage;
@@ -9,7 +9,7 @@ let userData;
 setDefaultTimeout(20000);
 
 Given('the user navigates to the text box form', async function () {
-  textBoxPage = new TextBox(this.page);
+  textBoxPage = new TextBoxPage(this.page);
   await textBoxPage.navigate();
 });
 

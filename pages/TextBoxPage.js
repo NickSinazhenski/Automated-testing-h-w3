@@ -48,10 +48,10 @@ class TextBoxPage extends BasePage {
     const currentAddressText = await this.getText(this.selectors.currentAddressOutput);
     const permanentAddressText = await this.getText(this.selectors.permanentAddressOutput);
 
-    expect(nameText).toBe(`Name:${user.firstName} ${user.lastName}`);
-    expect(emailText).toBe(`Email:${user.email}`);
-    expect(currentAddressText).toBe(`Current Address :${user.currentAddress} `);
-    expect(permanentAddressText).toBe(`Permananet Address :${user.permanentAddress} `);
+    expect(nameText.trim()).toBe(`Name:${user.firstName} ${user.lastName}`);
+    expect(emailText.trim()).toBe(`Email:${user.email}`);
+    expect(currentAddressText.trim()).toBe(`Current Address :${user.currentAddress}`);
+    expect(permanentAddressText.trim()).toBe(`Permananet Address :${user.permanentAddress}`);
   }
 }
 

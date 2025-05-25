@@ -1,6 +1,6 @@
 const { Given, When, Then, setDefaultTimeout } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const { SelectMenuPage } = require('../../pages/SelectMenuPage');
+const SelectMenuPage = require('../../pages/SelectMenuPage');
 
 let selectMenuPage;
 

@@ -1,4 +1,4 @@
-onst BasePage = require('./BasePage');
+const BasePage = require('./BasePage');
 
 class SelectMenuPage extends BasePage {
   constructor(page) {
@@ -13,7 +13,7 @@ class SelectMenuPage extends BasePage {
   }
 
   async open() {
-    await this.page.navigateToPage('https://demoqa.com/select-menu');
+    await this.navigateToPage('https://demoqa.com/select-menu');
   }
 
    async selectValue(value) {
