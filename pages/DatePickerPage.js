@@ -39,10 +39,10 @@ class DatePickerPage extends BasePage {
         timeout: 5000 
       });
 
-      // Wait for any animations to complete
+    
       await this.page.waitForLoadState('networkidle');
 
-      // Press Enter to confirm the date
+    
       await this.page.press(this.selectors.dateInput, 'Enter');
     } catch (error) {
       throw new Error(`Failed to fill date: ${error.message}`);
@@ -52,7 +52,7 @@ class DatePickerPage extends BasePage {
   async getSelectedDate() {
     try {
       const dateInput = this.page.locator(this.selectors.dateInput);
-      await dateInput.waitFor({ state: 'visible', timeout: 5000 });
+      await dateInput.waitFor({ state: 'visible', timeout: 1000 });
       return await dateInput.inputValue();
     } catch (error) {
       throw new Error(`Failed to get selected date: ${error.message}`);

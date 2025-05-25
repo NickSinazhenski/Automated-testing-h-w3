@@ -7,7 +7,7 @@ const DragAndDropPage = require('../../pages/DragAndDropPage');
 const BasePage = require('../../pages/BasePage');
 
 Given('I navigate to {string}', async function(url) {
-  await this.page.goto(url, { waitUntil: 'networkidle' });
+  await this.page.goto(url);
 });
 
 Given('I am on the {string} page', async function(pageName) {
