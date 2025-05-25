@@ -1,0 +1,960 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "interaction-with-various-types-of-alerts;display-and-accept-a-standard-alert",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Display and accept a standard alert",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 367756400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user navigates to the Alerts section",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2159638999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "they trigger a simple alert popup",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73657699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "an alert appears with text \"You clicked a button\"",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1798100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 233697600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "interaction-with-various-types-of-alerts;cancel-a-confirmation-alert",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Cancel a confirmation alert",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 350476200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "the user navigates to the Alerts section",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2040826100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "they activate the confirm alert and press Cancel",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52829400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the result area shows \"You selected Cancel\"",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5885800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 209913300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "interaction-with-various-types-of-alerts;accept-a-confirmation-alert",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Accept a confirmation alert",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 328556299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "the user navigates to the Alerts section",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1832646299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "they activate the confirm alert and press OK",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67382100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the result area shows \"You selected Ok\"",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5681199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 202455300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "interaction-with-various-types-of-alerts;enter-text-into-a-prompt-alert",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Enter text into a prompt alert",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 310915500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "the user navigates to the Alerts section",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5233136299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "the prompt alert is shown and they input \"Playwright\"",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59944200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "the page displays prompt result containing \"You entered Playwright\"",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4700000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 210084100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "interaction-with-various-types-of-alerts;handle-a-timed-alert",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Handle a timed alert",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 310879299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "the user navigates to the Alerts section",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5939582800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "they click the delayed alert button and accept it",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6060681299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "an alert appears with text \"This alert appeared after 5 seconds\"",
+            "match": {
+              "location": "features\\step_definitions\\alertSteps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 327399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 215797299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "interaction-with-various-types-of-alerts",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Interaction with various types of alerts",
+    "tags": [],
+    "uri": "features\\alerts.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "automation-practice-form;successful-form-submission-with-valid-data",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful form submission with valid data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 304135399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the form page",
+            "match": {
+              "location": "features\\step_definitions\\formSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2283398900
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstName",
+                      "lastName",
+                      "email",
+                      "gender",
+                      "mobile"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Palina",
+                      "Dolbik",
+                      "palina.dolbik@mail.com",
+                      "1",
+                      "9876543210"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I fill the form with:",
+            "match": {
+              "location": "features\\step_definitions\\formSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132475600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I submit the form",
+            "match": {
+              "location": "features\\step_definitions\\formSteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67701099
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstName",
+                      "lastName",
+                      "email",
+                      "gender",
+                      "mobile"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Palina",
+                      "Dolbik",
+                      "palina.dolbik@mail.com",
+                      "1",
+                      "9876543210"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see the submission modal with:",
+            "match": {
+              "location": "features\\step_definitions\\formSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60025499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219643500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "automation-practice-form",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Automation Practice Form",
+    "tags": [],
+    "uri": "features\\support\\form.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "interacting-with-select-menus-on-the-demoqa-page;choosing-different-options-from-all-dropdown-menus",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Choosing different options from all dropdown menus",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 300459399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the select menu webpage",
+            "match": {
+              "location": "features\\step_definitions\\select_menuSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2896993900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I pick \"Group 2, option 1\" from the \"Select Value\" dropdown",
+            "match": {
+              "location": "features\\step_definitions\\select_menuSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 237886000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I choose \"Other\" from the \"Select One\" dropdown",
+            "match": {
+              "location": "features\\step_definitions\\select_menuSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 309389899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I select \"Green\" in the old-style dropdown menu",
+            "match": {
+              "location": "features\\step_definitions\\select_menuSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9141300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I pick multiple colors: \"Black\" and \"Blue\"",
+            "match": {
+              "location": "features\\step_definitions\\select_menuSteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124089199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the selected colors should include \"Black\" and \"Blue\"",
+            "match": {
+              "location": "features\\step_definitions\\select_menuSteps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18154599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 242471000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "interacting-with-select-menus-on-the-demoqa-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Interacting with Select Menus on the DemoQA page",
+    "tags": [],
+    "uri": "features\\support\\select_menu.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "filling-out-the-text-box-form;user-fills-out-the-text-box-with-random-information",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User fills out the text box with random information",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 316547899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user navigates to the text box form",
+            "match": {
+              "location": "features\\step_definitions\\text_boxSteps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7117526399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user inputs randomly generated form data",
+            "match": {
+              "location": "features\\step_definitions\\text_boxSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74231200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "submits the completed form",
+            "match": {
+              "location": "features\\step_definitions\\text_boxSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 135355199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the form output should match the entered values",
+            "match": {
+              "location": "features\\step_definitions\\text_boxSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44103200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 248116200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "filling-out-the-text-box-form",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Filling out the text box form",
+    "tags": [],
+    "uri": "features\\support\\text_box.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "tool-tips;check-text-on-button-tooltip",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Check text on Button tooltip",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 309514099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the tool tips page",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4778162399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I hover over the element with selector \"#toolTipButton\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58264299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see the tooltip text \"You hovered over the Button\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 314493200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 200458099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "tool-tips;check-text-on-text-field-tooltip",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Check text on Text Field tooltip",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 301930500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on the tool tips page",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5869976599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I hover over the element with selector \"#toolTipTextField\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154461299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see the tooltip text \"You hovered over the text field\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289565100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207772200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "tool-tips;check-text-on-contrary-tooltip",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Check text on Contrary tooltip",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 305909199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am on the tool tips page",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4673474999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I hover over the element with text \"Contrary\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152638300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the tooltip text \"You hovered over the Contrary\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 307659000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 231954100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "tool-tips;check-text-on-section-tooltip",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Check text on Section tooltip",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 336334800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am on the tool tips page",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5026873899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I hover over the element with text \"1.10.32\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72930500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see the tooltip text \"You hovered over the 1.10.32\"",
+            "match": {
+              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 280023599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 245273699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "tool-tips",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Tool Tips",
+    "tags": [],
+    "uri": "features\\support\\tool_tips.feature"
+  }
+]
