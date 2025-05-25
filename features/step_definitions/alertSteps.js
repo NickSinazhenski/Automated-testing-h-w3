@@ -1,5 +1,5 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
-const { AlertsPage } = require('../../pages/alertsPage');
+const { AlertsPage } = require('../../pages/AlertsPage');
 const { expect } = require('@playwright/test');
 
 Given('the user navigates to the Alerts section', async function () {
