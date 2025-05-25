@@ -8,4 +8,5 @@ const TextBox_test_user = {
   currentAddress: faker.location.streetAddress(),
   permanentAddress: faker.location.streetAddress(),
 }
+
 export default TextBox_test_user;

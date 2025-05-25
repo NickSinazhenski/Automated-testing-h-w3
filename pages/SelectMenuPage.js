@@ -1,15 +1,23 @@
-class SelectMenuPage {
+onst BasePage = require('./BasePage');
+
+class SelectMenuPage extends BasePage {
   constructor(page) {
-    this.page = page;
-    this.url = 'https://demoqa.com/select-menu';
+    super(page);
+    this.selectors = {
+      valueSelect: '#withOptGroup',
+      oneSelect: '#selectOne',
+      oldStyleSelect: '#oldSelectMenu',
+      multiSelect: '#selectMenuContainer div[class*="css-1wa3eu0-placeholder"]',
+      selectedValues: '.css-12jo7m5'
+    };
   }
 
   async open() {
-    await this.page.goto(this.url);
+    await this.page.navigateToPage('https://demoqa.com/select-menu');
   }
 
-  async selectValue(value) {
-    await this.page.locator('#withOptGroup').click();
+   async selectValue(value) {
+    await this.clickElement(this.selectors.valueSelect);
     await this.page.getByText(value, { exact: true }).click();
   }
 
@@ -19,12 +27,11 @@ class SelectMenuPage {
   }
 
   async selectOldStyle(value) {
-    await this.page.selectOption('#oldSelectMenu', value);
+    await this.page.selectOption(this.selectors.oldStyleSelect, value);
   }
 
   async selectMultiSelect(values) {
-    const multiSelect = this.page.locator('#selectMenuContainer div[class*="css-1wa3eu0-placeholder"]');
-    await multiSelect.click();
+    await this.clickElement(this.selectors.multiSelect);
     for (const val of values) {
       await this.page.keyboard.type(val);
       await this.page.keyboard.press('Enter');
@@ -32,8 +39,10 @@ class SelectMenuPage {
   }
 
   async getSelectedValues() {
-    return await this.page.locator('.css-12jo7m5').allTextContents();
+    const selectedElements = this.page.locator(this.selectors.selectedValues);
+    await selectedElements.first().waitFor({ state: 'visible' });
+    return await selectedElements.allTextContents();
   }
 }
 
-module.exports = { SelectMenuPage };
+module.exports = SelectMenuPage;

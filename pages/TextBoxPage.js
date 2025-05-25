@@ -1,47 +1,58 @@
+const BasePage = require('./BasePage');
 const { expect } = require('@playwright/test');
 
-class TextBox {
-    constructor(page) {
-        this.page = page;
-        this.url = 'https://demoqa.com/text-box';
-        this.fullNameInput = '#userName';
-        this.emailInput = '#userEmail';
-        this.currentAddressInput = '#currentAddress';
-        this.permanentAddressInput = '#permanentAddress';
-        this.submitBtn = '#submit';
-    }
+class TextBoxPage extends BasePage {
+  constructor(page) {
+    super(page);
+    this.selectors = {
+      fullNameInput: '#userName',
+      emailInput: '#userEmail',
+      currentAddressInput: '#currentAddress',
+      permanentAddressInput: '#permanentAddress',
+      submitBtn: '#submit',
+      output: '#output',
+      nameOutput: 'p#name',
+      emailOutput: 'p#email',
+      currentAddressOutput: 'p#currentAddress',
+      permanentAddressOutput: 'p#permanentAddress'
+    };
+  }
+  
+  async navigate() {
+    await this.navigateToPage('https://demoqa.com/text-box');
+  }
+  
+  async fillForm(user) {
+    await this.fillInput(this.selectors.fullNameInput, `${user.firstName} ${user.lastName}`);
+    await this.fillInput(this.selectors.emailInput, user.email);
+    await this.fillInput(this.selectors.currentAddressInput, user.currentAddress);
+    await this.fillInput(this.selectors.permanentAddressInput, user.permanentAddress);
+  }
+  
+  async submitForm() {
+    await this.clickElement(this.selectors.submitBtn);
+  }
 
-    async navigate() {
-        await this.page.goto(this.url);
-    }
+  async checkOutput(user) {
+    await this.waitForElement(this.selectors.output);
+    
+    const output = this.page.locator(this.selectors.output);
+    
+    await this.waitForElement(this.selectors.nameOutput);
+    await this.waitForElement(this.selectors.emailOutput);
+    await this.waitForElement(this.selectors.currentAddressOutput);
+    await this.waitForElement(this.selectors.permanentAddressOutput);
+    
+    const nameText = await this.getText(this.selectors.nameOutput);
+    const emailText = await this.getText(this.selectors.emailOutput);
+    const currentAddressText = await this.getText(this.selectors.currentAddressOutput);
+    const permanentAddressText = await this.getText(this.selectors.permanentAddressOutput);
 
-    async fillForm(user) {
-        await this.page.fill(this.fullNameInput, `${user.firstName} ${user.lastName}`);
-        await this.page.fill(this.emailInput, user.email);
-        await this.page.fill(this.currentAddressInput, user.currentAddress);
-        await this.page.fill(this.permanentAddressInput, user.permanentAddress);
-    }
-
-    async submitForm() {
-        await this.page.click(this.submitBtn);
-    }
-
-    async checkOutput(user) {
-        const modal = this.page.locator('#output');
-        await modal.waitFor({ state: 'visible' });
-
-        const nameLocator = modal.locator('p#name');
-        await expect(nameLocator).toHaveText(`Name:${user.firstName} ${user.lastName}`);
-
-        const emailLocator = modal.locator('p#email');
-        await expect(emailLocator).toHaveText(`Email:${user.email}`);
-
-        const currentAddressLocator = modal.locator('p#currentAddress');
-        await expect(currentAddressLocator).toHaveText(`Current Address :${user.currentAddress} `);
-
-        const permanentAddressLocator = modal.locator('p#permanentAddress');
-        await expect(permanentAddressLocator).toHaveText(`Permananet Address :${user.permanentAddress} `);
-    }
+    expect(nameText).toBe(`Name:${user.firstName} ${user.lastName}`);
+    expect(emailText).toBe(`Email:${user.email}`);
+    expect(currentAddressText).toBe(`Current Address :${user.currentAddress} `);
+    expect(permanentAddressText).toBe(`Permananet Address :${user.permanentAddress} `);
+  }
 }
 
-module.exports = { TextBox };
+module.exports = TextBoxPage;
