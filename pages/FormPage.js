@@ -1,5 +1,6 @@
-import { expect } from '@playwright/test';
-export class FormPage {
+const { expect } = require('@playwright/test');
+
+class FormPage {
   constructor(page) {
     this.page = page;
     this.url = 'https://demoqa.com/automation-practice-form';
@@ -49,3 +50,5 @@ export class FormPage {
     }
   }
 }
+
+module.exports = { FormPage };

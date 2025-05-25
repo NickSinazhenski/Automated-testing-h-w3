@@ -3,7 +3,9 @@ const { chromium, firefox } = require('playwright');
 
 class CustomWorld {
   constructor() {
-    // Default to Chrome if not specified
+    this.page = null;
+    this.browser = null;
+    this.context = null;
     this.browserType = process.env.BROWSER || 'chrome';
   }
 
@@ -25,6 +27,12 @@ class CustomWorld {
   }
 
   async close() {
+    if (this.page) {
+      await this.page.close();
+    }
+    if (this.context) {
+      await this.context.close();
+    }
     if (this.browser) {
       await this.browser.close();
     }

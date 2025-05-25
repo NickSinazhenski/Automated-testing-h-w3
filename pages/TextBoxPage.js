@@ -1,9 +1,10 @@
 const BasePage = require('./BasePage');
+const { expect } = require('@playwright/test');
 
 class TextBoxPage extends BasePage {
   constructor(page) {
     super(page);
-    this.locators = {
+    this.selectors = {
       fullNameInput: '#userName',
       emailInput: '#userEmail',
       currentAddressInput: '#currentAddress',
@@ -18,47 +19,39 @@ class TextBoxPage extends BasePage {
   }
   
   async navigate() {
-    await this.navigateTo('https://demoqa.com/text-box');
+    await this.navigateToPage('https://demoqa.com/text-box');
   }
   
   async fillForm(user) {
-    await this.fillInput(this.locators.fullNameInput, `${user.firstName} ${user.lastName}`);
-    await this.fillInput(this.locators.emailInput, user.email);
-    await this.fillInput(this.locators.currentAddressInput, user.currentAddress);
-    await this.fillInput(this.locators.permanentAddressInput, user.permanentAddress);
+    await this.fillInput(this.selectors.fullNameInput, `${user.firstName} ${user.lastName}`);
+    await this.fillInput(this.selectors.emailInput, user.email);
+    await this.fillInput(this.selectors.currentAddressInput, user.currentAddress);
+    await this.fillInput(this.selectors.permanentAddressInput, user.permanentAddress);
   }
   
   async submitForm() {
-    await this.clickElement(this.locators.submitBtn);
+    await this.clickElement(this.selectors.submitBtn);
   }
 
   async checkOutput(user) {
-    await this.waitForElement(this.locators.output);
+    await this.waitForElement(this.selectors.output);
     
-    const output = this.page.locator(this.locators.output);
+    const output = this.page.locator(this.selectors.output);
     
-    await this.waitForElement(this.locators.nameOutput);
-    await this.waitForElement(this.locators.emailOutput);
-    await this.waitForElement(this.locators.currentAddressOutput);
-    await this.waitForElement(this.locators.permanentAddressOutput);
+    await this.waitForElement(this.selectors.nameOutput);
+    await this.waitForElement(this.selectors.emailOutput);
+    await this.waitForElement(this.selectors.currentAddressOutput);
+    await this.waitForElement(this.selectors.permanentAddressOutput);
+    
+    const nameText = await this.getText(this.selectors.nameOutput);
+    const emailText = await this.getText(this.selectors.emailOutput);
+    const currentAddressText = await this.getText(this.selectors.currentAddressOutput);
+    const permanentAddressText = await this.getText(this.selectors.permanentAddressOutput);
 
-    const nameText = await this.getText(this.locators.nameOutput);
-    const emailText = await this.getText(this.locators.emailOutput);
-    const currentAddressText = await this.getText(this.locators.currentAddressOutput);
-    const permanentAddressText = await this.getText(this.locators.permanentAddressOutput);
-
-    if (nameText !== `Name:${user.firstName} ${user.lastName}`) {
-      throw new Error(`Name mismatch. Expected: Name:${user.firstName} ${user.lastName}, Got: ${nameText}`);
-    }
-    if (emailText !== `Email:${user.email}`) {
-      throw new Error(`Email mismatch. Expected: Email:${user.email}, Got: ${emailText}`);
-    }
-    if (currentAddressText !== `Current Address :${user.currentAddress} `) {
-      throw new Error(`Current address mismatch. Expected: Current Address :${user.currentAddress} , Got: ${currentAddressText}`);
-    }
-    if (permanentAddressText !== `Permananet Address :${user.permanentAddress} `) {
-      throw new Error(`Permanent address mismatch. Expected: Permananet Address :${user.permanentAddress} , Got: ${permanentAddressText}`);
-    }
+    expect(nameText).toBe(`Name:${user.firstName} ${user.lastName}`);
+    expect(emailText).toBe(`Email:${user.email}`);
+    expect(currentAddressText).toBe(`Current Address :${user.currentAddress} `);
+    expect(permanentAddressText).toBe(`Permananet Address :${user.permanentAddress} `);
   }
 }
 

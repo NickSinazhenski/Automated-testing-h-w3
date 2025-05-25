@@ -1,10 +1,13 @@
 const { Before, After, BeforeAll, AfterAll, setDefaultTimeout } = require('@cucumber/cucumber');
+const { chromium } = require('playwright');
 
 setDefaultTimeout(30000);
 
 Before(async function() {
   try {
-    await this.init();
+    this.browser = await chromium.launch({ headless: false });
+    this.context = await this.browser.newContext();
+    this.page = await this.context.newPage();
   } catch (error) {
     console.error('Failed to initialize test:', error);
     throw error;
@@ -14,7 +17,9 @@ Before(async function() {
 After(async function() {
   try {
     await this.page.waitForLoadState('domcontentloaded');
-    await this.close();
+    await this.page.close();
+    await this.context.close();
+    await this.browser.close();
   } catch (error) {
     console.error('Failed to clean up test:', error);
     throw error;
