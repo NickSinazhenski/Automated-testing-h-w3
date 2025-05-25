@@ -4,12 +4,14 @@ class BasePage {
     this.defaultTimeout = 10000;
   }
 
-  async navigateTo(url) {
-    try {
-      await this.page.goto(url, { waitUntil: 'networkidle' });
-    } catch (error) {
-      throw new Error(`Failed to navigate to ${url}: ${error.message}`);
-    }
+  static async initializePage(page, PageClass, url) {
+    const pageObject = new PageClass(page);
+    await pageObject.navigateToPage(url);
+    return pageObject;
+  }
+
+  async navigateToPage(url) {
+    await this.page.goto(url, { waitUntil: 'networkidle' });
   }
 
   async clickElement(locator, options = {}) {

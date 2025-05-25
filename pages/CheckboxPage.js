@@ -5,7 +5,7 @@ class CheckboxPage extends BasePage {
     super(page);
     this.locators = {
       expandAllButton: '.rct-option-expand-all',
-      checkbox: (name) => `//span[text()="${name}"]/ancestor::label//span[@class="rct-checkbox"]`,
+      checkbox: (name) => `//span[@class="rct-title" and text()="${name}"]/ancestor::label//span[@class="rct-checkbox"]`,
       resultText: '.display-result',
       checkboxContainer: '.rct-node'
     };
@@ -43,6 +43,18 @@ class CheckboxPage extends BasePage {
     } catch (error) {
       console.error('Failed to get result text:', error);
       throw new Error(`Failed to get result text: ${error.message}`);
+    }
+  }
+
+  async isCheckboxChecked(name) {
+    try {
+      const checkboxSelector = this.locators.checkbox(name);
+      await this.page.waitForSelector(checkboxSelector, { state: 'visible', timeout: 10000 });
+      const checkbox = this.page.locator(checkboxSelector);
+      return await checkbox.isChecked();
+    } catch (error) {
+      console.error(`Failed to check if checkbox "${name}" is checked:`, error);
+      throw new Error(`Failed to check if checkbox "${name}" is checked: ${error.message}`);
     }
   }
 }

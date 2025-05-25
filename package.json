@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --config cucumber.js"
+    "test": "cucumber-js --config cucumber.js",
+    "test:chrome": "set BROWSER=chrome && cucumber-js --config cucumber.js",
+    "test:firefox": "set BROWSER=firefox && cucumber-js --config cucumber.js",
+    "test:all": "npm run test:chrome && npm run test:firefox"
   },
   "keywords": [],
   "author": "",

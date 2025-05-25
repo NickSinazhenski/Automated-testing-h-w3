@@ -1,17 +1,10 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const SliderPage = require('../../pages/SliderPage');
 const DataGenerator = require('../../utils/DataGenerator');
-
-Given('I am on the slider page', async function() {
-  await this.page.goto('https://demoqa.com/slider', { waitUntil: 'load' });
-});
 
 When('I move the slider to a random value', async function() {
   const value = DataGenerator.generateSliderValue();
-  // Get the slider element
   const slider = await this.page.locator('.range-slider');
-  // Get the slider's bounding box
   const box = await slider.boundingBox();
   // Calculate the position to click (value is between 0-100)
   const x = box.x + (box.width * (value / 100));

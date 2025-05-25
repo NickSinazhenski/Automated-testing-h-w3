@@ -1,17 +1,7 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const DragAndDropPage = require('../../pages/DragAndDropPage');
-
-Given('I am on the droppable page', async function() {
-  await this.page.goto('https://demoqa.com/droppable', { waitUntil: 'load' });
-});
 
 When('I drag the element to the drop target', async function() {
-  this.dragAndDropPage = new DragAndDropPage(this.page);
-  
-  // Wait for elements to be ready
-  await this.page.waitForLoadState('networkidle');
-  
   // Get initial positions
   this.initialPositions = await this.dragAndDropPage.getInitialPositions();
   
@@ -29,7 +19,7 @@ When('I drag the element to the drop target', async function() {
         throw new Error(`Failed to perform drag and drop after ${maxAttempts} attempts: ${error.message}`);
       }
       console.log(`Retry attempt ${attempts} for drag and drop`);
-      await this.page.waitForTimeout(1000); // Wait before retry
+      await this.page.waitForTimeout(1000);
     }
   }
 });
