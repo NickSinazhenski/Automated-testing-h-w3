@@ -5,7 +5,6 @@ setDefaultTimeout(30000);
 Before(async function() {
   try {
     await this.init();
-    await this.page.waitForLoadState('networkidle');
   } catch (error) {
     console.error('Failed to initialize test:', error);
     throw error;
@@ -14,7 +13,7 @@ Before(async function() {
 
 After(async function() {
   try {
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForLoadState('domcontentloaded');
     await this.close();
   } catch (error) {
     console.error('Failed to clean up test:', error);
