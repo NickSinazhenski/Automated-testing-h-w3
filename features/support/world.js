@@ -10,19 +10,15 @@ class CustomWorld {
   }
 
   async init() {
-    const width = parseInt(process.env.VIEWPORT_WIDTH || '1920', 10);
-    const height = parseInt(process.env.VIEWPORT_HEIGHT || '1080', 10);
-    const browserOptions = { headless: false };
+  const width = parseInt(process.env.VIEWPORT_WIDTH || '1920', 10);
+  const height = parseInt(process.env.VIEWPORT_HEIGHT || '1080', 10);
+  const browserType = this.browserType.toLowerCase();
+  const browser = browserType === 'firefox' ? firefox : chromium;
 
-    const browserType = this.browserType.toLowerCase();
-    const browser = browserType === 'firefox' ? firefox : chromium;
-    this.browser = await browser.launch({
-      headless: true
-    });
-
-    this.context = await this.browser.newContext({ viewport: { width, height } });
-    this.page = await this.context.newPage();
-  }
+  this.browser = await browser.launch({ headless: true }); 
+  this.context = await this.browser.newContext({ viewport: { width, height } });
+  this.page = await this.context.newPage();
+}
 
   async close() {
     if (this.page) {
