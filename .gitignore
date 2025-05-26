@@ -6,3 +6,4 @@ playwright-report/
 test-results/
 .DS_Store
 Thumbs.db
+report/cucumber_report.html
