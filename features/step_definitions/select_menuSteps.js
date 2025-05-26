@@ -8,6 +8,7 @@ setDefaultTimeout(20000);
 
 Given('I open the select menu webpage', async function () {
   selectMenuPage = new SelectMenuPage(this.page);
+  
   await selectMenuPage.open();
 });
 

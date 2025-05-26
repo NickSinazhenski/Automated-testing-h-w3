@@ -8,6 +8,7 @@ Given('I am on the radio button page', async function() {
 });
 
 When('I select the {string} radio button', async function(option) {
+   await this.page.waitForLoadState('networkidle');
   await this.radioButtonPage.selectRadioButton(option);
 });
 

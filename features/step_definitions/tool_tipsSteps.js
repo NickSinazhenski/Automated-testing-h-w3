@@ -19,6 +19,7 @@ When('I hover over the element with selector {string}', async function (selector
 
 When('I hover over the element with text {string}', async function (text) {
   currentElementLocator = this.page.locator('a', { hasText: text });
+  await currentElementLocator.scrollIntoViewIfNeeded();
   await currentElementLocator.hover();
 });
 

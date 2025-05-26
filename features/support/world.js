@@ -6,23 +6,26 @@ class CustomWorld {
     this.page = null;
     this.browser = null;
     this.context = null;
-    this.browserType = process.env.BROWSER || 'chrome';
+    this.browserType = process.env.BROWSER || 'chromium';
   }
 
   async init() {
+    const width = parseInt(process.env.VIEWPORT_WIDTH || '1920', 10);
+    const height = parseInt(process.env.VIEWPORT_HEIGHT || '1080', 10);
     const browserOptions = { headless: false };
-    
+
     switch(this.browserType.toLowerCase()) {
       case 'firefox':
         this.browser = await firefox.launch(browserOptions);
         break;
+      case 'chromium':
       case 'chrome':
       default:
         this.browser = await chromium.launch(browserOptions);
         break;
     }
-    
-    this.context = await this.browser.newContext();
+
+    this.context = await this.browser.newContext({ viewport: { width, height } });
     this.page = await this.context.newPage();
   }
 
@@ -39,4 +42,4 @@ class CustomWorld {
   }
 }
 
-setWorldConstructor(CustomWorld); 
+setWorldConstructor(CustomWorld);

@@ -40,8 +40,22 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests (${{ matrix.project }})
-        run: npm run test --project='${{ matrix.project }}'
+      - name: Run Cucumber tests (${{ matrix.project }})
+        run: |
+          case "${{ matrix.project }}" in
+            Chrome-1920)
+              npm run test:chrome-1920
+              ;;
+            Chrome-1366)
+              npm run test:chrome-1366
+              ;;
+            Firefox-1920)
+              npm run test:firefox-1920
+              ;;
+            Firefox-1366)
+              npm run test:firefox-1366
+              ;;
+          esac
         continue-on-error: true
 
       - name: Upload Playwright report
