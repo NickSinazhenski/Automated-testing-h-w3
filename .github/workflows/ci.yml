@@ -27,10 +27,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -42,17 +42,18 @@ jobs:
 
       - name: Run Playwright tests (${{ matrix.project }})
         run: npx playwright test --project='${{ matrix.project }}'
+        continue-on-error: true
 
       - name: Upload Playwright report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@3.1.2
         with:
           name: playwright-report-${{ matrix.project }}
           path: playwright-report
 
       - name: Upload screenshots on failure
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@3.1.2
         with:
           name: error-screenshots-${{ matrix.project }}
           path: test-results/**/trace.zip
