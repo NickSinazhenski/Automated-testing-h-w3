@@ -46,14 +46,14 @@ jobs:
 
       - name: Upload Playwright report
         if: always()
-        uses: actions/upload-artifact@3.1.2
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report-${{ matrix.project }}
           path: playwright-report
 
       - name: Upload screenshots on failure
         if: failure()
-        uses: actions/upload-artifact@3.1.2
+        uses: actions/upload-artifact@v4
         with:
           name: error-screenshots-${{ matrix.project }}
           path: test-results/**/trace.zip
