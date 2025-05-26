@@ -14,16 +14,11 @@ class CustomWorld {
     const height = parseInt(process.env.VIEWPORT_HEIGHT || '1080', 10);
     const browserOptions = { headless: false };
 
-    switch(this.browserType.toLowerCase()) {
-      case 'firefox':
-        this.browser = await firefox.launch(browserOptions);
-        break;
-      case 'chromium':
-      case 'chrome':
-      default:
-        this.browser = await chromium.launch(browserOptions);
-        break;
-    }
+    const browserType = this.browserType.toLowerCase();
+    const browser = browserType === 'firefox' ? firefox : chromium;
+    this.browser = await browser.launch({
+      headless: true
+    });
 
     this.context = await this.browser.newContext({ viewport: { width, height } });
     this.page = await this.context.newPage();
