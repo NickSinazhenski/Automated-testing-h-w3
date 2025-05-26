@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 367756400
+              "duration": 1643221000
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 4,
             "name": "the user navigates to the Alerts section",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:5"
+              "location": "features/step_definitions/alertSteps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2159638999
+              "duration": 1047926167
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 5,
             "name": "they trigger a simple alert popup",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:10"
+              "location": "features/step_definitions/alertSteps.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 73657699
+              "duration": 84052707
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "an alert appears with text \"You clicked a button\"",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:19"
+              "location": "features/step_definitions/alertSteps.js:21"
             },
             "result": {
               "status": "passed",
-              "duration": 1798100
+              "duration": 1497874
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 233697600
+              "duration": 201705291
             }
           }
         ],
@@ -80,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 350476200
+              "duration": 857018791
             }
           },
           {
@@ -89,11 +89,11 @@
             "line": 9,
             "name": "the user navigates to the Alerts section",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:5"
+              "location": "features/step_definitions/alertSteps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2040826100
+              "duration": 870767332
             }
           },
           {
@@ -102,11 +102,11 @@
             "line": 10,
             "name": "they activate the confirm alert and press Cancel",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:23"
+              "location": "features/step_definitions/alertSteps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 52829400
+              "duration": 126854708
             }
           },
           {
@@ -115,11 +115,11 @@
             "line": 11,
             "name": "the result area shows \"You selected Cancel\"",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:37"
+              "location": "features/step_definitions/alertSteps.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 5885800
+              "duration": 5577542
             }
           },
           {
@@ -127,7 +127,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 209913300
+              "duration": 182900583
             }
           }
         ],
@@ -146,7 +146,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 328556299
+              "duration": 972406457
             }
           },
           {
@@ -155,11 +155,11 @@
             "line": 14,
             "name": "the user navigates to the Alerts section",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:5"
+              "location": "features/step_definitions/alertSteps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 1832646299
+              "duration": 1028809499
             }
           },
           {
@@ -168,11 +168,11 @@
             "line": 15,
             "name": "they activate the confirm alert and press OK",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:30"
+              "location": "features/step_definitions/alertSteps.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 67382100
+              "duration": 114239457
             }
           },
           {
@@ -181,11 +181,11 @@
             "line": 16,
             "name": "the result area shows \"You selected Ok\"",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:37"
+              "location": "features/step_definitions/alertSteps.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 5681199
+              "duration": 2842999
             }
           },
           {
@@ -193,7 +193,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 202455300
+              "duration": 204895457
             }
           }
         ],
@@ -212,7 +212,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 310915500
+              "duration": 1175197041
             }
           },
           {
@@ -221,11 +221,11 @@
             "line": 19,
             "name": "the user navigates to the Alerts section",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:5"
+              "location": "features/step_definitions/alertSteps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 5233136299
+              "duration": 1706466042
             }
           },
           {
@@ -234,11 +234,11 @@
             "line": 20,
             "name": "the prompt alert is shown and they input \"Playwright\"",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:42"
+              "location": "features/step_definitions/alertSteps.js:44"
             },
             "result": {
               "status": "passed",
-              "duration": 59944200
+              "duration": 139686415
             }
           },
           {
@@ -247,11 +247,11 @@
             "line": 21,
             "name": "the page displays prompt result containing \"You entered Playwright\"",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:49"
+              "location": "features/step_definitions/alertSteps.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 4700000
+              "duration": 3776041
             }
           },
           {
@@ -259,7 +259,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 210084100
+              "duration": 294691084
             }
           }
         ],
@@ -278,7 +278,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 310879299
+              "duration": 864253000
             }
           },
           {
@@ -287,11 +287,11 @@
             "line": 24,
             "name": "the user navigates to the Alerts section",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:5"
+              "location": "features/step_definitions/alertSteps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 5939582800
+              "duration": 962609833
             }
           },
           {
@@ -300,11 +300,11 @@
             "line": 25,
             "name": "they click the delayed alert button and accept it",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:54"
+              "location": "features/step_definitions/alertSteps.js:56"
             },
             "result": {
               "status": "passed",
-              "duration": 6060681299
+              "duration": 6052257958
             }
           },
           {
@@ -313,11 +313,11 @@
             "line": 26,
             "name": "an alert appears with text \"This alert appeared after 5 seconds\"",
             "match": {
-              "location": "features\\step_definitions\\alertSteps.js:19"
+              "location": "features/step_definitions/alertSteps.js:21"
             },
             "result": {
               "status": "passed",
-              "duration": 327399
+              "duration": 939166
             }
           },
           {
@@ -325,7 +325,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 215797299
+              "duration": 145726500
             }
           }
         ],
@@ -338,7 +338,1042 @@
     "keyword": "Feature",
     "name": "Interaction with various types of alerts",
     "tags": [],
-    "uri": "features\\alerts.feature"
+    "uri": "features/alerts.feature"
+  },
+  {
+    "description": "  As a user,\n  I want to be able to select checkboxes\n  So that I can choose multiple options",
+    "elements": [
+      {
+        "description": "",
+        "id": "checkbox-selection;selecting-a-random-checkbox",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Selecting a random checkbox",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 965688374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"checkbox\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30003821833,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/nicksinazhenki/Desktop/Automated-testing-hw3/Automated-testing-h-w3/node_modules/@cucumber/cucumber/lib/time.js:64:20)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I expand all checkboxes",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:5"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I select a random checkbox",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:9"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the selected checkbox should be checked",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:19"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 158195625
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkbox",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkbox-selection;selecting-a-specific-checkbox",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Selecting a specific checkbox",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1058997124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"checkbox\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3060668250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I expand all checkboxes",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75641583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I select the \"Desktop\" checkbox",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45359167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the \"Desktop\" checkbox should be checked",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4904375
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 217980916
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkbox",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkbox-selection;selecting-a-specific-checkbox",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Selecting a specific checkbox",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1103335290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"checkbox\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30002902957,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/nicksinazhenki/Desktop/Automated-testing-hw3/Automated-testing-h-w3/node_modules/@cucumber/cucumber/lib/time.js:64:20)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I expand all checkboxes",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:5"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I select the \"Documents\" checkbox",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the \"Documents\" checkbox should be checked",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:24"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 173164583
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkbox",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkbox-selection;selecting-a-specific-checkbox",
+        "keyword": "Scenario Outline",
+        "line": 23,
+        "name": "Selecting a specific checkbox",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 961428833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"checkbox\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3427295333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I expand all checkboxes",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89526834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I select the \"Downloads\" checkbox",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46841583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the \"Downloads\" checkbox should be checked",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3743249
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 276657375
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkbox",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkbox-selection;selecting-a-specific-checkbox",
+        "keyword": "Scenario Outline",
+        "line": 24,
+        "name": "Selecting a specific checkbox",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1046235832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"checkbox\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3392864500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I expand all checkboxes",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66192333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I select the \"Office\" checkbox",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45415457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the \"Office\" checkbox should be checked",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4720125
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 244593000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkbox",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkbox-selection;selecting-a-specific-checkbox",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Selecting a specific checkbox",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 971788459
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"checkbox\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30001306083,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/nicksinazhenki/Desktop/Automated-testing-hw3/Automated-testing-h-w3/node_modules/@cucumber/cucumber/lib/time.js:64:20)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I expand all checkboxes",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:5"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I select the \"WorkSpace\" checkbox",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the \"WorkSpace\" checkbox should be checked",
+            "match": {
+              "location": "features/step_definitions/checkBox.steps.js:24"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219277040
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkbox",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "checkbox-selection",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Checkbox Selection",
+    "tags": [
+      {
+        "name": "@checkbox",
+        "line": 1
+      },
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "features/checkBox.feature"
+  },
+  {
+    "description": "  As a user\n  I want to be able to select dates\n  So that I can input date information",
+    "elements": [
+      {
+        "description": "",
+        "id": "date-picker;selecting-a-random-future-date",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Selecting a random future date",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1094468667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"date picker\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3114584707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I select a random future date",
+            "match": {
+              "location": "features/step_definitions/datePicker.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122096542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the selected date should be displayed in the correct format",
+            "match": {
+              "location": "features/step_definitions/datePicker.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4008249
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227510916
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@datepicker",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "date-picker",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Date Picker",
+    "tags": [
+      {
+        "name": "@datepicker",
+        "line": 1
+      },
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "features/datePicker.feature"
+  },
+  {
+    "description": "  As a user\n  I want to be able to drag and drop elements\n  So that I can rearrange content on the page",
+    "elements": [
+      {
+        "description": "",
+        "id": "drag-and-drop;dragging-an-element-to-a-drop-target",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Dragging an element to a drop target",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 960574415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"drag and drop\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30001922417,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/nicksinazhenki/Desktop/Automated-testing-hw3/Automated-testing-h-w3/node_modules/@cucumber/cucumber/lib/time.js:64:20)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I drag the element to the drop target",
+            "match": {
+              "location": "features/step_definitions/dragAndDrop.steps.js:4"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the element should be dropped successfully",
+            "match": {
+              "location": "features/step_definitions/dragAndDrop.steps.js:27"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 225339416
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@draganddrop",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "drag-and-drop",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Drag and Drop",
+    "tags": [
+      {
+        "name": "@draganddrop",
+        "line": 1
+      },
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "features/dragAndDrop.feature"
+  },
+  {
+    "description": "  As a user\n  I want to be able to select radio buttons\n  So that I can choose a single option from a set",
+    "elements": [
+      {
+        "description": "",
+        "id": "radio-buttons;selecting-radio-buttons",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Selecting radio buttons",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1105865082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the \"radio button\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30002276582,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/nicksinazhenki/Desktop/Automated-testing-hw3/Automated-testing-h-w3/node_modules/@cucumber/cucumber/lib/time.js:64:20)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I select the \"Yes\" radio button",
+            "match": {
+              "location": "features/step_definitions/radioButton.steps.js:10"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the text \"Yes\" should be displayed in the result",
+            "match": {
+              "location": "features/step_definitions/radioButton.steps.js:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 278894624
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "radio-buttons;selecting-radio-buttons",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Selecting radio buttons",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1106606082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the \"radio button\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30002947292,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/nicksinazhenki/Desktop/Automated-testing-hw3/Automated-testing-h-w3/node_modules/@cucumber/cucumber/lib/time.js:64:20)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I select the \"Impressive\" radio button",
+            "match": {
+              "location": "features/step_definitions/radioButton.steps.js:10"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the text \"Impressive\" should be displayed in the result",
+            "match": {
+              "location": "features/step_definitions/radioButton.steps.js:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 220449333
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "radio-buttons",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Radio Buttons",
+    "tags": [],
+    "uri": "features/radioButton.feature"
+  },
+  {
+    "description": "  As a user\n  I want to be able to adjust a slider\n  So that I can select values within a range",
+    "elements": [
+      {
+        "description": "",
+        "id": "slider;moving-the-slider-to-a-random-value",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Moving the slider to a random value",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1045266375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the \"slider\" page",
+            "match": {
+              "location": "features/step_definitions/baseStepDefinition.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30002016041,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/nicksinazhenki/Desktop/Automated-testing-hw3/Automated-testing-h-w3/node_modules/@cucumber/cucumber/lib/time.js:64:20)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I move the slider to a random value",
+            "match": {
+              "location": "features/step_definitions/slider.steps.js:5"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the slider value should be within the expected range",
+            "match": {
+              "location": "features/step_definitions/slider.steps.js:16"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 241338042
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@slider",
+            "line": 1
+          },
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "slider",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Slider",
+    "tags": [
+      {
+        "name": "@slider",
+        "line": 1
+      },
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "features/slider.feature"
   },
   {
     "description": "",
@@ -355,7 +1390,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 304135399
+              "duration": 1128915166
             }
           },
           {
@@ -364,11 +1399,11 @@
             "line": 4,
             "name": "I open the form page",
             "match": {
-              "location": "features\\step_definitions\\formSteps.js:7"
+              "location": "features/step_definitions/formSteps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2283398900
+              "duration": 979354333
             }
           },
           {
@@ -400,11 +1435,11 @@
             "line": 5,
             "name": "I fill the form with:",
             "match": {
-              "location": "features\\step_definitions\\formSteps.js:12"
+              "location": "features/step_definitions/formSteps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 132475600
+              "duration": 79705999
             }
           },
           {
@@ -413,11 +1448,11 @@
             "line": 8,
             "name": "I submit the form",
             "match": {
-              "location": "features\\step_definitions\\formSteps.js:24"
+              "location": "features/step_definitions/formSteps.js:23"
             },
             "result": {
               "status": "passed",
-              "duration": 67701099
+              "duration": 48951750
             }
           },
           {
@@ -449,11 +1484,11 @@
             "line": 9,
             "name": "I should see the submission modal with:",
             "match": {
-              "location": "features\\step_definitions\\formSteps.js:28"
+              "location": "features/step_definitions/formSteps.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 60025499
+              "duration": 20998167
             }
           },
           {
@@ -461,7 +1496,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 219643500
+              "duration": 185227750
             }
           }
         ],
@@ -474,7 +1509,7 @@
     "keyword": "Feature",
     "name": "Automation Practice Form",
     "tags": [],
-    "uri": "features\\support\\form.feature"
+    "uri": "features/support/form.feature"
   },
   {
     "description": "",
@@ -491,7 +1526,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 300459399
+              "duration": 1028918041
             }
           },
           {
@@ -500,11 +1535,11 @@
             "line": 4,
             "name": "I open the select menu webpage",
             "match": {
-              "location": "features\\step_definitions\\select_menuSteps.js:9"
+              "location": "features/step_definitions/select_menuSteps.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 2896993900
+              "duration": 1705951874
             }
           },
           {
@@ -513,11 +1548,11 @@
             "line": 6,
             "name": "I pick \"Group 2, option 1\" from the \"Select Value\" dropdown",
             "match": {
-              "location": "features\\step_definitions\\select_menuSteps.js:14"
+              "location": "features/step_definitions/select_menuSteps.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 237886000
+              "duration": 116418249
             }
           },
           {
@@ -526,11 +1561,11 @@
             "line": 7,
             "name": "I choose \"Other\" from the \"Select One\" dropdown",
             "match": {
-              "location": "features\\step_definitions\\select_menuSteps.js:20"
+              "location": "features/step_definitions/select_menuSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 309389899
+              "duration": 288679999
             }
           },
           {
@@ -539,11 +1574,11 @@
             "line": 8,
             "name": "I select \"Green\" in the old-style dropdown menu",
             "match": {
-              "location": "features\\step_definitions\\select_menuSteps.js:26"
+              "location": "features/step_definitions/select_menuSteps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 9141300
+              "duration": 7535292
             }
           },
           {
@@ -552,11 +1587,11 @@
             "line": 9,
             "name": "I pick multiple colors: \"Black\" and \"Blue\"",
             "match": {
-              "location": "features\\step_definitions\\select_menuSteps.js:30"
+              "location": "features/step_definitions/select_menuSteps.js:30"
             },
             "result": {
               "status": "passed",
-              "duration": 124089199
+              "duration": 73571166
             }
           },
           {
@@ -565,11 +1600,11 @@
             "line": 11,
             "name": "the selected colors should include \"Black\" and \"Blue\"",
             "match": {
-              "location": "features\\step_definitions\\select_menuSteps.js:34"
+              "location": "features/step_definitions/select_menuSteps.js:34"
             },
             "result": {
               "status": "passed",
-              "duration": 18154599
+              "duration": 12493208
             }
           },
           {
@@ -577,7 +1612,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 242471000
+              "duration": 183173707
             }
           }
         ],
@@ -590,7 +1625,7 @@
     "keyword": "Feature",
     "name": "Interacting with Select Menus on the DemoQA page",
     "tags": [],
-    "uri": "features\\support\\select_menu.feature"
+    "uri": "features/support/select_menu.feature"
   },
   {
     "description": "",
@@ -607,7 +1642,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 316547899
+              "duration": 1012089082
             }
           },
           {
@@ -616,11 +1651,11 @@
             "line": 4,
             "name": "the user navigates to the text box form",
             "match": {
-              "location": "features\\step_definitions\\text_boxSteps.js:11"
+              "location": "features/step_definitions/text_boxSteps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 7117526399
+              "duration": 1563772875
             }
           },
           {
@@ -629,11 +1664,11 @@
             "line": 5,
             "name": "the user inputs randomly generated form data",
             "match": {
-              "location": "features\\step_definitions\\text_boxSteps.js:16"
+              "location": "features/step_definitions/text_boxSteps.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 74231200
+              "duration": 77190458
             }
           },
           {
@@ -642,11 +1677,11 @@
             "line": 6,
             "name": "submits the completed form",
             "match": {
-              "location": "features\\step_definitions\\text_boxSteps.js:28"
+              "location": "features/step_definitions/text_boxSteps.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 135355199
+              "duration": 127480249
             }
           },
           {
@@ -655,11 +1690,11 @@
             "line": 7,
             "name": "the form output should match the entered values",
             "match": {
-              "location": "features\\step_definitions\\text_boxSteps.js:32"
+              "location": "features/step_definitions/text_boxSteps.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 44103200
+              "duration": 18697791
             }
           },
           {
@@ -667,7 +1702,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 248116200
+              "duration": 177372458
             }
           }
         ],
@@ -680,7 +1715,7 @@
     "keyword": "Feature",
     "name": "Filling out the text box form",
     "tags": [],
-    "uri": "features\\support\\text_box.feature"
+    "uri": "features/support/text_box.feature"
   },
   {
     "description": "",
@@ -697,7 +1732,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 309514099
+              "duration": 1005170292
             }
           },
           {
@@ -706,11 +1741,11 @@
             "line": 4,
             "name": "I am on the tool tips page",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+              "location": "features/step_definitions/tool_tipsSteps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 4778162399
+              "duration": 985305207
             }
           },
           {
@@ -719,11 +1754,11 @@
             "line": 5,
             "name": "I hover over the element with selector \"#toolTipButton\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:15"
+              "location": "features/step_definitions/tool_tipsSteps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 58264299
+              "duration": 57357875
             }
           },
           {
@@ -732,11 +1767,11 @@
             "line": 6,
             "name": "I should see the tooltip text \"You hovered over the Button\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+              "location": "features/step_definitions/tool_tipsSteps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 314493200
+              "duration": 269381124
             }
           },
           {
@@ -744,7 +1779,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 200458099
+              "duration": 197422708
             }
           }
         ],
@@ -763,7 +1798,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 301930500
+              "duration": 1019157457
             }
           },
           {
@@ -772,11 +1807,11 @@
             "line": 9,
             "name": "I am on the tool tips page",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+              "location": "features/step_definitions/tool_tipsSteps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 5869976599
+              "duration": 948101958
             }
           },
           {
@@ -785,11 +1820,11 @@
             "line": 10,
             "name": "I hover over the element with selector \"#toolTipTextField\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:15"
+              "location": "features/step_definitions/tool_tipsSteps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 154461299
+              "duration": 64583750
             }
           },
           {
@@ -798,11 +1833,11 @@
             "line": 11,
             "name": "I should see the tooltip text \"You hovered over the text field\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+              "location": "features/step_definitions/tool_tipsSteps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 289565100
+              "duration": 270016333
             }
           },
           {
@@ -810,7 +1845,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 207772200
+              "duration": 192633583
             }
           }
         ],
@@ -829,7 +1864,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 305909199
+              "duration": 987329874
             }
           },
           {
@@ -838,11 +1873,11 @@
             "line": 14,
             "name": "I am on the tool tips page",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+              "location": "features/step_definitions/tool_tipsSteps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 4673474999
+              "duration": 1072147249
             }
           },
           {
@@ -851,11 +1886,11 @@
             "line": 15,
             "name": "I hover over the element with text \"Contrary\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:20"
+              "location": "features/step_definitions/tool_tipsSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 152638300
+              "duration": 68174708
             }
           },
           {
@@ -864,11 +1899,11 @@
             "line": 16,
             "name": "I should see the tooltip text \"You hovered over the Contrary\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+              "location": "features/step_definitions/tool_tipsSteps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 307659000
+              "duration": 258105334
             }
           },
           {
@@ -876,7 +1911,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 231954100
+              "duration": 199048291
             }
           }
         ],
@@ -895,7 +1930,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 336334800
+              "duration": 1011332750
             }
           },
           {
@@ -904,11 +1939,11 @@
             "line": 19,
             "name": "I am on the tool tips page",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:10"
+              "location": "features/step_definitions/tool_tipsSteps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 5026873899
+              "duration": 871884166
             }
           },
           {
@@ -917,11 +1952,11 @@
             "line": 20,
             "name": "I hover over the element with text \"1.10.32\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:20"
+              "location": "features/step_definitions/tool_tipsSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 72930500
+              "duration": 55463875
             }
           },
           {
@@ -930,11 +1965,11 @@
             "line": 21,
             "name": "I should see the tooltip text \"You hovered over the 1.10.32\"",
             "match": {
-              "location": "features\\step_definitions\\tool_tipsSteps.js:25"
+              "location": "features/step_definitions/tool_tipsSteps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 280023599
+              "duration": 258882750
             }
           },
           {
@@ -942,7 +1977,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 245273699
+              "duration": 196053625
             }
           }
         ],
@@ -955,6 +1990,6 @@
     "keyword": "Feature",
     "name": "Tool Tips",
     "tags": [],
-    "uri": "features\\support\\tool_tips.feature"
+    "uri": "features/support/tool_tips.feature"
   }
 ]

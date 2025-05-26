@@ -1,8 +1,10 @@
+const { blockAds } = require('../../utils/blockAds');
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { AlertsPage } = require('../../pages/AlertsPage');
 const { expect } = require('@playwright/test');
 
 Given('the user navigates to the Alerts section', async function () {
+  await blockAds(this.page);
   this.alertPage = new AlertsPage(this.page);
   await this.alertPage.open();
 });

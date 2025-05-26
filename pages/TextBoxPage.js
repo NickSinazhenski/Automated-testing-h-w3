@@ -1,6 +1,6 @@
 const BasePage = require('./BasePage');
 const { expect } = require('@playwright/test');
-
+const { blockAds } = require('../utils/blockAds');
 class TextBoxPage extends BasePage {
   constructor(page) {
     super(page);
@@ -19,6 +19,7 @@ class TextBoxPage extends BasePage {
   }
   
   async navigate() {
+    await blockAds(this.page);
     await this.navigateToPage('https://demoqa.com/text-box');
   }
   

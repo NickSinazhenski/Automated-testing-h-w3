@@ -4,7 +4,7 @@ on:
   push:
     branches: 
       - main
-      - implement-CI     # ← добавлено
+      - implement-CI    
   pull_request:
     branches: 
       - main
@@ -41,7 +41,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests (${{ matrix.project }})
-        run: npx playwright test --project='${{ matrix.project }}'
+        run: npm run test --project='${{ matrix.project }}'
         continue-on-error: true
 
       - name: Upload Playwright report
