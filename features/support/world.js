@@ -17,10 +17,10 @@ class CustomWorld {
 
     // Всегда headless в CI
     const isCI = !!process.env.CI;
-    const headless = isCI || process.env.HEADLESS !== 'false';
+    const headless = isCI || process.env.HEADLESS !== 'true';
 
     this.browser = await browser.launch({
-      headless,
+      headless: false,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
