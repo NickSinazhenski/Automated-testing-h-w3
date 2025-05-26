@@ -15,7 +15,10 @@ class CustomWorld {
   const browserType = this.browserType.toLowerCase();
   const browser = browserType === 'firefox' ? firefox : chromium;
 
-  this.browser = await browser.launch({ headless: true }); 
+  this.browser = await browser.launch({
+    headless: true, // always headless for CI
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  }); 
   this.context = await this.browser.newContext({ viewport: { width, height } });
   this.page = await this.context.newPage();
 }
