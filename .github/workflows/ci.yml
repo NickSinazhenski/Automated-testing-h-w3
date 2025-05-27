@@ -63,7 +63,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report-${{ matrix.project }}
-          path: reports/cucumber_report
+          path: reports
 
       - name: Upload screenshots on failure
         if: failure()
