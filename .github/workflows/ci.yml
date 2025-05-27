@@ -70,4 +70,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: error-screenshots-${{ matrix.project }}
-          path: test-results/**/trace.zip
+          path: screenshots
