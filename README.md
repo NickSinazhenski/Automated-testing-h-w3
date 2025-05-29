@@ -14,7 +14,6 @@ We wrote 23 test scenarios  using Gherkin syntax (Given-When-Then)
 - CI/CD support
 - HTML report generation
 
-
 #  Branching Strategy
 We used the Git Feature Branch Workflow:
 - main: Production-ready tests.
@@ -23,7 +22,7 @@ We used the Git Feature Branch Workflow:
 #Installation
 
 0. Clone the repository:
-git clone https://github.com/ryasrdp/23-HR-JS2.git
+git clone https://github.com/NickSinazhenski/Automated-testing-h-w3.git
 
 1. Install Dependencies
 npm install
@@ -40,25 +39,41 @@ npm run test:all
 #Running Tagged Tests
 You can run specific test scenarios by using tags defined in your .feature files. Tags help filter and organize tests — for example, by feature, type (@ui, @api), or test level (@regression, @smoke, etc.).
 
-
 #Screenshots on Failure
 Screenshots are saved automatically on test failure in the screenshots/ directory.
-
 
 #Report Generation
 After test execution, a detailed HTML report is generated automatically in the reports/ cucumber_report.html.
 
-
-
 #Project Structure
--/step/definitions - contain tests files
+-/features/step_definitions - contain tests files
 
 -/pages - Page Object Model files
 
--/support - testing scenarious
+-features/support - testing scenarious
 
--/test_data - test data
+-/test_data - test data for scenarios
+
+-/reports - html file with report generation
+
+-/utils - data generator
+
+-/gitignore
+
+-/README
+
+-/plawright.config.js
+
+-/package.json
+
+-/package-lock.json
+
+-/cucumber.js
+
+-/generate_report.js
 
 #CI/CD
 The project is configured to run tests automatically using GitHub actions.
+Daily
+On every pull request
 
