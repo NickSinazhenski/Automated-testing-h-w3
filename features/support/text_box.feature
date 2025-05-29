@@ -1,3 +1,4 @@
+@ui @textbox @regression
 Feature: Filling out the text box form
 
   Scenario: User fills out the text box with random information

@@ -1,3 +1,4 @@
+@ui @select @regression
 Feature: Interacting with Select Menus on the DemoQA page
 
   Scenario: Choosing different options from all dropdown menus
