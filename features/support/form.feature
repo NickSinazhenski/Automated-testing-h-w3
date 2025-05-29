@@ -1,5 +1,7 @@
+@ui @form @smoke
 Feature: Automation Practice Form
 
+  @regression
   Scenario: Successful form submission with valid data
     Given I open the form page
     When I fill the form with:
