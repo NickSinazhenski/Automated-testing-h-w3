@@ -47,3 +47,18 @@ Screenshots are saved automatically on test failure in the screenshots/ director
 
 #Report Generation
 After test execution, a detailed HTML report is generated automatically in the reports/ cucumber_report.html.
+
+
+
+#Project Structure
+-/step/definitions - contain tests files
+
+-/pages - Page Object Model files
+
+-/support - testing scenarious
+
+-/test_data - test data
+
+#CI/CD
+The project is configured to run tests automatically using GitHub actions.
+
