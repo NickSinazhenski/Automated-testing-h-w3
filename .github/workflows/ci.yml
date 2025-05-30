@@ -70,5 +70,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: failed-screenshots
-          path: screenshots
+          path: /home/runner/work/Automated-testing-h-w3/Automated-testing-h-w3/screenshots
           if-no-files-found: warn
