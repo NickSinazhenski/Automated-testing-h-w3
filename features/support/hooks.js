@@ -26,6 +26,22 @@ After(async function() {
   }
 });
 
+const fs = require('fs');
+const path = require('path');
+
+After(async function (scenario) {
+  if (scenario.result.status === 'FAILED' && this.page) {
+    const dirPath = path.resolve(__dirname, '../../screenshots');
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath);
+    }
+    const fileName = `${scenario.pickle.name.replace(/\s+/g, '_')}.png`;
+    const filePath = path.join(dirPath, fileName);
+    await this.page.screenshot({ path: filePath, fullPage: true });
+    console.log(`📸 Screenshot saved to: ${filePath}`);
+  }
+});
+
 BeforeAll(async function() {
   console.log('Starting the test suite');
 });
