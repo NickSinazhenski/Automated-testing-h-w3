@@ -10,7 +10,7 @@ on:
       - main
       - implement-CI   
   schedule:
-    - cron: '*/5 * * * *' 
+    - cron: '0 0 * * *'
 
 jobs:
   test:
