@@ -1,7 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
 const { FormPage } = require('../../pages/FormPage');
-
 let formPage;
 
 Given('I open the form page', async function () {

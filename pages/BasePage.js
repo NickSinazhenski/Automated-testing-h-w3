@@ -1,3 +1,4 @@
+const { blockAds } = require('../utils/blockAds');
 class BasePage {
   constructor(page) {
     this.page = page;
@@ -11,6 +12,7 @@ class BasePage {
   }
 
   async navigateToPage(url) {
+    await blockAds(this.page);
     await this.page.goto(url, { waitUntil: 'networkidle' });
   }
 

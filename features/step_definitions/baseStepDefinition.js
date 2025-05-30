@@ -5,8 +5,10 @@ const RadioButtonPage = require('../../pages/RadioButtonPage');
 const SliderPage = require('../../pages/SliderPage');
 const DragAndDropPage = require('../../pages/DragAndDropPage');
 const BasePage = require('../../pages/BasePage');
+const { blockAds } = require('../../utils/blockAds');
 
 Given('I navigate to {string}', async function(url) {
+  await blockAds(this.page);
   await this.page.goto(url);
 });
 

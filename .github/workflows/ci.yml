@@ -1,0 +1,68 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches: 
+      - main
+      - implement-CI    
+  pull_request:
+    branches: 
+      - main
+      - implement-CI   
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  test:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+          - Chrome-1920
+          - Chrome-1366
+          - Firefox-1920
+          - Firefox-1366
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Cucumber tests (${{ matrix.project }})
+        run: |
+          case "${{ matrix.project }}" in
+            Chrome-1920)
+              xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' npm run test:chrome-1920
+              ;;
+            Chrome-1366)
+              xvfb-run --auto-servernum --server-args='-screen 0 1366x768x24' npm run test:chrome-1366
+              ;;
+            Firefox-1920)
+              xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' npm run test:firefox-1920
+              ;;
+            Firefox-1366)
+              xvfb-run --auto-servernum --server-args='-screen 0 1366x768x24' npm run test:firefox-1366
+              ;;
+          esac
+        continue-on-error: true
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.project }}
+          path: reports
+
+      

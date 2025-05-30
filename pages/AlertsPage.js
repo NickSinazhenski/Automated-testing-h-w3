@@ -1,3 +1,4 @@
+const { blockAds } = require('../utils/blockAds');
 class AlertsPage {
   constructor(page) {
     this.page = page;
@@ -11,6 +12,7 @@ class AlertsPage {
   }
 
   async open() {
+    await blockAds(this.page);
     await this.page.goto(this.url);
   }
 

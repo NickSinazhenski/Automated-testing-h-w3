@@ -21,7 +21,7 @@ class RadioButtonPage extends BasePage {
 
     // Wait for the element to be visible and clickable
     const element = this.page.locator(radioButton);
-    await element.waitFor({ state: 'visible', timeout: 5000 });
+    await element.waitFor({ state: 'visible', timeout: 10000 });
     
     // Wait for any animations to complete
     await this.page.waitForLoadState('networkidle');

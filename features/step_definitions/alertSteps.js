@@ -1,5 +1,5 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
-const { AlertsPage } = require('../../pages/alertsPage');
+const { Given, When, Then, After } = require('@cucumber/cucumber');
+const { AlertsPage } = require('../../pages/AlertsPage');
 const { expect } = require('@playwright/test');
 
 Given('the user navigates to the Alerts section', async function () {
@@ -60,3 +60,5 @@ When('they click the delayed alert button and accept it',{ timeout: 10000 }, asy
   await this.alertPage.clickTimerAlertButton();
   await this.page.waitForTimeout(6000); 
 });
+
+

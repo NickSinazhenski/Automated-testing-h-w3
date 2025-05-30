@@ -12,7 +12,21 @@ export default defineConfig({
     viewport: { width: 1920, height: 1080 },
   },
   projects: [
-    { name: 'Chrome', use: { browserName: 'chromium' } },
-    { name: 'Firefox', use: { browserName: 'firefox' } },
-  ],
+  {
+    name: 'Chrome-1920',
+    use: { browserName: 'chromium', viewport: { width: 1920, height: 1080 } }
+  },
+  {
+    name: 'Chrome-1366',
+    use: { browserName: 'chromium', viewport: { width: 1366, height: 768 } }
+  },
+  {
+    name: 'Firefox-1920',
+    use: { browserName: 'firefox', viewport: { width: 1920, height: 1080 } }
+  },
+  {
+    name: 'Firefox-1366',
+    use: { browserName: 'firefox', viewport: { width: 1366, height: 768 } }
+  }
+]
 });

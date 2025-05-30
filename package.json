@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
-    "test": "cucumber-js --format json:reports/cucumber_report.json && node generate_report.js"
-    "test": "cucumber-js --config cucumber.js",
+    "test": "cucumber-js --format json:reports/cucumber_report.json && node generate_report.js",
     "test:chrome": "set BROWSER=chrome && cucumber-js --config cucumber.js",
     "test:firefox": "set BROWSER=firefox && cucumber-js --config cucumber.js",
-    "test:all": "npm run test:chrome && npm run test:firefox"
-
+    "test:all": "npm run test:chrome && npm run test:firefox",
+    "test:chrome-1920": "BROWSER=chromium VIEWPORT_WIDTH=1920 VIEWPORT_HEIGHT=1080 npx cucumber-js",
+    "test:chrome-1366": "BROWSER=chromium VIEWPORT_WIDTH=1366 VIEWPORT_HEIGHT=768 npx cucumber-js",
+    "test:firefox-1920": "BROWSER=firefox VIEWPORT_WIDTH=1920 VIEWPORT_HEIGHT=1080 npx cucumber-js",
+    "test:firefox-1366": "BROWSER=firefox VIEWPORT_WIDTH=1366 VIEWPORT_HEIGHT=768 npx cucumber-js"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,9 @@
     "@playwright/test": "^1.52.0",
     "cucumber-html-reporter": "^7.2.0",
     "playwright": "^1.52.0"
+  },
+  "dependencies": {
+    "hosted-git-info": "^8.1.0",
+    "validate-npm-package-license": "^3.0.4"
   }
 }

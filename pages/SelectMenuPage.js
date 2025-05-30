@@ -1,5 +1,5 @@
 const BasePage = require('./BasePage');
-
+const { blockAds } = require('../utils/blockAds');
 class SelectMenuPage extends BasePage {
   constructor(page) {
     super(page);
@@ -13,6 +13,7 @@ class SelectMenuPage extends BasePage {
   }
 
   async open() {
+    await blockAds(this.page);
     await this.navigateToPage('https://demoqa.com/select-menu');
   }
 

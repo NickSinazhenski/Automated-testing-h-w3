@@ -1,5 +1,5 @@
 const { expect } = require('@playwright/test');
-
+const { blockAds } = require('../utils/blockAds');
 class ToolTipsPage {
   constructor(page) {
     this.page = page;
@@ -12,6 +12,7 @@ class ToolTipsPage {
   }
 
   async navigate() {
+    await blockAds(this.page);
     await this.page.goto(this.url);
   }
  
