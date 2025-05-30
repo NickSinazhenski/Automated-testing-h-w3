@@ -17,7 +17,7 @@ When('they trigger a simple alert popup', async function () {
 });
 
 Then('an alert appears with text {string}', async function (expectedMessage) {
-  expect(this.dialogMessage).toBe('НЕПРАВИЛЬНОЕ СООБЩЕНИЕ');
+  expect(this.dialogMessage).toBe(expectedMessage);
 });
 
 When('they activate the confirm alert and press Cancel', async function () {
