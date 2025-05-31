@@ -2,6 +2,7 @@
 
 ## Overview
 This project contains automated end-to-end tests for the web application [DemoQA](https://demoqa.com) using Playwright with BDD (Behavior-Driven Development) methodology via Cucumber. The test suite includes 23 test scenarios written in Gherkin syntax (Given-When-Then).
+
 -----
 
 ## Tech Stack
@@ -121,10 +122,12 @@ Common tag examples:
 
 ### Screenshots
 Screenshots are automatically captured on test failure and saved in the `screenshots/` directory.
+
 -----
 
 ### HTML Reports
 After test execution, a detailed HTML report is generated in `reports/cucumber_report.html`.
+
 -----
 
 ## Development Workflow
@@ -155,4 +158,5 @@ The project is configured with GitHub Actions to:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 -----
