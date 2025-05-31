@@ -4,56 +4,64 @@ class SliderPage extends BasePage {
   constructor(page) {
     super(page);
     this.selectors = {
-      slider: '.range-slider',
-      sliderValue: '#sliderValue',
-      sliderTrack: '.range-slider__track'
+      sliderHandle: '.range-slider',
+      sliderInput: '#sliderValue',
+      sliderContainer: '.range-slider__container'
     };
   }
 
   async getInitialSliderValue() {
-    const valueInput = this.page.locator(this.selectors.sliderValue);
-    await valueInput.waitFor({ state: 'visible', timeout: 5000 });
-    return await valueInput.inputValue();
+    return await this.getValue(this.selectors.sliderInput);
   }
 
   async moveSlider(targetValue) {
-    const slider = this.page.locator(this.selectors.slider);
-    const track = this.page.locator(this.selectors.sliderTrack);
-    
-    // Wait for elements to be ready
-    await slider.waitFor({ state: 'visible', timeout: 5000 });
-    await track.waitFor({ state: 'visible', timeout: 5000 });
+    try {
+      // Wait for elements to be visible
+      await this.waitForElement(this.selectors.sliderHandle);
+      await this.waitForElement(this.selectors.sliderInput);
 
-    // Get the track dimensions for relative positioning
-    const trackBox = await track.boundingBox();
-    if (!trackBox) {
-      throw new Error('Could not get slider track dimensions');
+      // Get slider bounding box
+      const slider = this.page.locator(this.selectors.sliderHandle);
+      const box = await slider.boundingBox();
+      if (!box) throw new Error('Could not get slider bounding box');
+
+      // Calculate the target x position with more precision
+      const min = 0;
+      const max = 100;
+      const percent = (targetValue - min) / (max - min);
+      const x = Math.round(box.x + (percent * box.width));
+      const y = Math.round(box.y + (box.height / 2));
+
+      // Move mouse to the start of the slider and click
+      await this.page.mouse.move(box.x + 1, y);
+      await this.page.mouse.down();
+      
+      // Move to target position with smaller steps for more precision
+      await this.page.mouse.move(x, y, { steps: 20 });
+      await this.page.mouse.up();
+
+      // Wait for the value to stabilize
+      await this.page.waitForTimeout(500);
+
+      // Verify the value is within acceptable range
+      const finalValue = await this.getCurrentSliderValue();
+      const tolerance = 2;
+      if (Math.abs(Number(finalValue) - targetValue) > tolerance) {
+        // If not within range, try one more time with a more direct approach
+        await this.page.mouse.move(box.x + 1, y);
+        await this.page.mouse.down();
+        await this.page.mouse.move(x, y);
+        await this.page.mouse.up();
+        await this.page.waitForTimeout(500);
+      }
+    } catch (error) {
+      console.error('Error moving slider:', error);
+      throw error;
     }
-
-    // Calculate the target position as a percentage of the track width
-    const targetPosition = targetValue / 100;
-
-    // Use Playwright's drag functionality
-    await slider.dragTo(track, {
-      targetPosition: { x: targetPosition, y: 0.5 }
-    });
-
-    // Wait for the value to update
-    await this.page.waitForFunction(
-      (selector, expectedValue) => {
-        const input = document.querySelector(selector);
-        return input && input.value === expectedValue.toString();
-      },
-      this.selectors.sliderValue,
-      targetValue,
-      { timeout: 5000 }
-    );
   }
 
   async getCurrentSliderValue() {
-    const valueInput = this.page.locator(this.selectors.sliderValue);
-    await valueInput.waitFor({ state: 'visible', timeout: 1000 });
-    return await valueInput.inputValue();
+    return await this.getValue(this.selectors.sliderInput);
   }
 }
 

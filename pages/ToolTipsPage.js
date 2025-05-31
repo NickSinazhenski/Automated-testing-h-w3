@@ -24,7 +24,13 @@ class ToolTipsPage {
     return tooltip.textContent();
   }
 
-  
+  getElementBySelector(selector) {
+    return this.page.locator(selector);
+  }
+
+  getElementByText(text) {
+    return this.page.locator('a', { hasText: text });
+  }
 }
 
 module.exports = { ToolTipsPage };
