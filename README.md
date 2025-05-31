@@ -68,6 +68,22 @@ npm run test:firefox
 npm run test:all
 ```
 
+### Parallel Test Execution
+The project is configured to run tests in parallel across different browser configurations:
+- Chrome (1920x1080)
+- Chrome (1366x768)
+- Firefox (1920x1080)
+- Firefox (1366x768)
+
+To run tests in parallel:
+```bash
+# Run all tests in parallel across all configurations
+npm test
+
+# Run tests in parallel with specific number of workers
+npm test -- --workers=4
+```
+
 ### Running Tagged Tests
 You can run specific test scenarios using tags defined in your .feature files. Tags help organize tests by feature, type, or test level.
 
