@@ -1,79 +1,148 @@
-# Automated-testing-h-w3
-#Description:
-This project contains automated end-to-end tests for the web application https://demoqa.com using Playwright with BDD (Behavior-Driven Development) methodology via Cucumber.
+# Automated Testing Project
 
-We wrote 23 test scenarios  using Gherkin syntax (Given-When-Then)
+## Overview
+-----
+This project contains automated end-to-end tests for the web application [DemoQA](https://demoqa.com) using Playwright with BDD (Behavior-Driven Development) methodology via Cucumber. The test suite includes 23 test scenarios written in Gherkin syntax (Given-When-Then).
 
-#Tech Stack
-- [Playwright](https://playwright.dev/)
-- [Cucumber.js](https://github.com/cucumber/cucumber-js)
-- Gherkin syntax
+## Tech Stack
+-----
+- [Playwright](https://playwright.dev/) - Modern end-to-end testing framework
+- [Cucumber.js](https://github.com/cucumber/cucumber-js) - BDD testing framework
+- Gherkin syntax for test scenarios
 - Cross-browser support (Chrome and Firefox)
 - Parallel test execution
 - Screenshots on failure
 - CI/CD support
 - HTML report generation
 
-#  Branching Strategy
-We used the Git Feature Branch Workflow:
-- main: Production-ready tests.
-- feature_name: For implementing specific scenarios or features before merging into main.
+## Project Structure
+-----
+```
+├── features/
+│   ├── step_definitions/    # Test implementation files
+│   └── support/            # Test scenarios and support files
+├── pages/                  # Page Object Model files
+├── test_data/             # Test data for scenarios
+├── reports/               # HTML reports
+├── utils/                 # Data generators
+├── screenshots/          # Failure screenshots
+├── playwright.config.js  # Playwright configuration
+├── cucumber.js          # Cucumber configuration
+├── package.json         # Project dependencies
+└── README.md           # Project documentation
+```
 
-#Installation
+## Getting Started
+-----
 
-0. Clone the repository:
+### Prerequisites
+- Node.js (latest LTS version recommended)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+```bash
 git clone https://github.com/NickSinazhenski/Automated-testing-h-w3.git
+cd Automated-testing-h-w3
+```
 
-1. Install Dependencies
+2. Install dependencies:
+```bash
 npm install
+```
 
-2. Run All Tests
+## Running Tests
+-----
+
+### Basic Test Execution
+```bash
+# Run all tests
 npm test
 
-3. Run by Browser
+# Run tests in specific browser
 npm run test:chrome
 npm run test:firefox
-4. Run tests in both Chrome and Firefox sequentially
+
+# Run tests in both browsers sequentially
 npm run test:all
+```
 
-#Running Tagged Tests
-You can run specific test scenarios by using tags defined in your .feature files. Tags help filter and organize tests — for example, by feature, type (@ui, @api), or test level (@regression, @smoke, etc.).
+### Parallel Test Execution
+The project is configured to run tests in parallel across different browser configurations:
+- Chrome (1920x1080)
+- Chrome (1366x768)
+- Firefox (1920x1080)
+- Firefox (1366x768)
 
-#Screenshots on Failure
-Screenshots are saved automatically on test failure in the screenshots/ directory.
+To run tests in parallel:
+```bash
+# Run all tests in parallel across all configurations
+npm test
 
-#Report Generation
-After test execution, a detailed HTML report is generated automatically in the reports/ cucumber_report.html.
+# Run tests in parallel with specific number of workers
+npm test -- --workers=4
+```
 
-#Project Structure
--/features/step_definitions - contain tests files
+### Running Tagged Tests
+You can run specific test scenarios using tags defined in your .feature files. Tags help organize tests by feature, type, or test level.
 
--/pages - Page Object Model files
+```bash
+# Run tests with a specific tag
+npm test -- --tags @tagName
 
--features/support - testing scenarious
+# Run tests with multiple tags (AND condition)
+npm test -- --tags "@tag1 and @tag2"
 
--/test_data - test data for scenarios
+# Run tests with multiple tags (OR condition)
+npm test -- --tags "@tag1 or @tag2"
 
--/reports - html file with report generation
+# Run tests with tag combinations
+npm test -- --tags "@smoke and (@chrome or @firefox)"
 
--/utils - data generator
+# Skip tests with specific tags
+npm test -- --tags "not @skip"
+```
 
--/gitignore
+Common tag examples:
+- `@smoke` - Smoke tests
+- `@regression` - Regression tests
+- `@ui` - UI tests
+- `@api` - API tests
+- `@chrome` - Chrome-specific tests
+- `@firefox` - Firefox-specific tests
 
--/README
+## Test Reports and Artifacts
+-----
 
--/plawright.config.js
+### Screenshots
+Screenshots are automatically captured on test failure and saved in the `screenshots/` directory.
 
--/package.json
+### HTML Reports
+After test execution, a detailed HTML report is generated in `reports/cucumber_report.html`.
 
--/package-lock.json
+## Development Workflow
+-----
 
--/cucumber.js
+### Branching Strategy
+We follow the Git Feature Branch Workflow:
+- `main`: Production-ready tests
+- `feature/*`: For implementing specific scenarios or features
 
--/generate_report.js
+### CI/CD
+The project is configured with GitHub Actions to:
+- Run tests on every pull request
+- Execute daily test runs
+- Generate and publish test reports
 
-#CI/CD
-The project is configured to run tests automatically using GitHub actions.
-Daily
-On every pull request
+## Contributing
+-----
+1. Create a new feature branch from `main`
+2. Implement your changes
+3. Run tests locally
+4. Submit a pull request
+
+## License
+-----
+This project is licensed under the MIT License - see the LICENSE file for details.
 

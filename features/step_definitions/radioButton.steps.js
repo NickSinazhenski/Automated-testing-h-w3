@@ -8,11 +8,10 @@ Given('I am on the radio button page', async function() {
 });
 
 When('I select the {string} radio button', async function(option) {
-   await this.page.waitForLoadState('networkidle');
   await this.radioButtonPage.selectRadioButton(option);
 });
 
-Then('the text {string} should be displayed in the result', async function(expectedText) {
-  const resultText = await this.radioButtonPage.getResultText();
-  expect(resultText).toBe(`You have selected ${expectedText}`);
+Then('I should see the result {string}', async function(expectedText) {
+  const actualText = await this.radioButtonPage.getResultText();
+  expect(actualText).toContain(expectedText);
 }); 

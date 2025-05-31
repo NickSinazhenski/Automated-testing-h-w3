@@ -51,14 +51,14 @@ Then('the page displays prompt result containing {string}', async function (expe
   expect(result).toContain(expectedPrompt);
 });
 
-When('they click the delayed alert button and accept it',{ timeout: 10000 }, async function () {
+When('they click the delayed alert button and accept it', { timeout: 10000 }, async function () {
   this.dialogMessage = '';
   this.page.once('dialog', async (dialog) => {
     this.dialogMessage = dialog.message();
     await dialog.accept();
   });
   await this.alertPage.clickTimerAlertButton();
-  await this.page.waitForTimeout(6000); 
+  await this.page.waitForTimeout(6000);
 });
 
 

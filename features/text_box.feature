@@ -1,5 +1,8 @@
-@ui @textbox @regression
-Feature: Filling out the text box form
+@ui @textbox @smoke
+Feature: Text Box Form
+  As a user
+  I want to be able to fill out a text box form
+  So that I can submit my information
 
   Scenario: User fills out the text box with random information
     Given the user navigates to the text box form

@@ -1,5 +1,8 @@
-@ui @tooltips @smoke
+@ui @tooltips @regression
 Feature: Tool Tips
+  As a user
+  I want to see tooltips when hovering over elements
+  So that I can get additional information about UI elements
 
   @button @tooltip
   Scenario: Check text on Button tooltip

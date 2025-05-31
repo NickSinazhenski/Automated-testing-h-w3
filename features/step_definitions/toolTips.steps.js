@@ -13,12 +13,12 @@ Given('I am on the tool tips page', async function () {
 });
 
 When('I hover over the element with selector {string}', async function (selector) {
-  currentElementLocator = this.page.locator(selector);
+  currentElementLocator = toolTipsPage.getElementBySelector(selector);
   await currentElementLocator.hover();
 });
 
 When('I hover over the element with text {string}', async function (text) {
-  currentElementLocator = this.page.locator('a', { hasText: text });
+  currentElementLocator = toolTipsPage.getElementByText(text);
   await currentElementLocator.scrollIntoViewIfNeeded();
   await currentElementLocator.hover();
 });
