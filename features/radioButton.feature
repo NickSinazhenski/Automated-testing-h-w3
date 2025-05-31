@@ -1,14 +1,15 @@
-Feature: Radio Buttons
+@ui @radio @regression
+Feature: Radio Button Selection
   As a user
   I want to be able to select radio buttons
-  So that I can choose a single option from a set
+  So that I can choose a single option from a group
 
-  Scenario Outline: Selecting radio buttons
-    Given I am on the "radio button" page
-    When I select the "<option>" radio button
-    Then the text "<expected>" should be displayed in the result
+  Scenario: Selecting a radio button
+    Given I am on the radio button page
+    When I select the "Yes" radio button
+    Then I should see the result "You have selected Yes"
 
-    Examples:
-      | option     | expected   |
-      | Yes        | Yes        |
-      | Impressive | Impressive | 
+  Scenario: Selecting another radio button
+    Given I am on the radio button page
+    When I select the "Impressive" radio button
+    Then I should see the result "You have selected Impressive" 

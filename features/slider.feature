@@ -1,4 +1,4 @@
-@slider @ui @regression
+@ui @slider @regression
 Feature: Slider
   As a user
   I want to be able to adjust a slider
