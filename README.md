@@ -1,11 +1,11 @@
 # Automated Testing Project
 
 ## Overview
------
 This project contains automated end-to-end tests for the web application [DemoQA](https://demoqa.com) using Playwright with BDD (Behavior-Driven Development) methodology via Cucumber. The test suite includes 23 test scenarios written in Gherkin syntax (Given-When-Then).
+-----
 
 ## Tech Stack
------
+
 - [Playwright](https://playwright.dev/) - Modern end-to-end testing framework
 - [Cucumber.js](https://github.com/cucumber/cucumber-js) - BDD testing framework
 - Gherkin syntax for test scenarios
@@ -14,9 +14,10 @@ This project contains automated end-to-end tests for the web application [DemoQA
 - Screenshots on failure
 - CI/CD support
 - HTML report generation
+-----
 
 ## Project Structure
------
+
 ```
 ├── features/
 │   ├── step_definitions/    # Test implementation files
@@ -31,9 +32,10 @@ This project contains automated end-to-end tests for the web application [DemoQA
 ├── package.json         # Project dependencies
 └── README.md           # Project documentation
 ```
+-----
 
 ## Getting Started
------
+
 
 ### Prerequisites
 - Node.js (latest LTS version recommended)
@@ -51,9 +53,9 @@ cd Automated-testing-h-w3
 ```bash
 npm install
 ```
+-----
 
 ## Running Tests
------
 
 ### Basic Test Execution
 ```bash
@@ -83,6 +85,7 @@ npm test
 # Run tests in parallel with specific number of workers
 npm test -- --workers=4
 ```
+-----
 
 ### Running Tagged Tests
 You can run specific test scenarios using tags defined in your .feature files. Tags help organize tests by feature, type, or test level.
@@ -111,38 +114,45 @@ Common tag examples:
 - `@api` - API tests
 - `@chrome` - Chrome-specific tests
 - `@firefox` - Firefox-specific tests
+-----
 
 ## Test Reports and Artifacts
------
+
 
 ### Screenshots
 Screenshots are automatically captured on test failure and saved in the `screenshots/` directory.
+-----
 
 ### HTML Reports
 After test execution, a detailed HTML report is generated in `reports/cucumber_report.html`.
-
-## Development Workflow
 -----
 
+## Development Workflow
+
 ### Branching Strategy
+
 We follow the Git Feature Branch Workflow:
 - `main`: Production-ready tests
 - `feature/*`: For implementing specific scenarios or features
+-----
 
 ### CI/CD
+
 The project is configured with GitHub Actions to:
 - Run tests on every pull request
 - Execute daily test runs
 - Generate and publish test reports
+-----
 
 ## Contributing
------
+
 1. Create a new feature branch from `main`
 2. Implement your changes
 3. Run tests locally
 4. Submit a pull request
+-----
 
 ## License
------
-This project is licensed under the MIT License - see the LICENSE file for details.
 
+This project is licensed under the MIT License - see the LICENSE file for details.
+-----
