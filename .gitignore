@@ -9,3 +9,4 @@ Thumbs.db
 reports/*.html
 screenshots/
 reports/
+cucumber_report.json
